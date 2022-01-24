@@ -16,10 +16,6 @@
 # include "libft/libft.h"
 # include <fcntl.h>
 
-# define TRUE	0
-# define FALSE	1
-# define ERROR	-1
-
 typedef struct s_piece
 {
 	int					one_x;
@@ -62,6 +58,7 @@ t_location				*ft_tetri_collect(t_location *stats, char **tetri,
 int						ft_find_square(int **square, t_location *stats);
 void					ft_square_loop_x(int **square, t_location *stats,
 							int *len, t_location *head);
+int						ft_print_error(char **board, int i, t_location *stats);
 t_location				*ft_statsdel_stats(t_location **stats,
 							void (*del)(t_location *), t_location *new);
 void					ft_statsdel_content(t_location *stats);

@@ -12,16 +12,6 @@
 
 #include "fillit.h"
 
-static int	ft_print_error(char **board, int i, t_location *stats)
-{
-	if (board)
-		ft_double_arrdel(board, i);
-	if (stats)
-		ft_statsdel_stats(&stats, &ft_statsdel_content, NULL);
-	ft_putstr("error\n");
-	return (-1);
-}
-
 int	main(int argc, char **argv)
 {
 	int			tetri_count;
