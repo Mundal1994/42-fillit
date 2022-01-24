@@ -1,6 +1,0 @@
-#include <time.h>
-#include <stdio.h>
-
-clock_t begin = clock();
-clock_t end = clock();
-printf("Elapsed: %f seconds\n", (double)(end - begin) / CLOCKS_PER_SEC);
