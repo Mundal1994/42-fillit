@@ -9,11 +9,15 @@ HOW TO RUN TESTS
 
 		MYPATH="/Users/molesen/Desktop/Hive/v_projects/fillit"
 
-2. run the command
+2. got to the 'fillit' directory and run the command
+
+		make all
+
+3. run the command
 
 		./test.sh
 
-3. it should then compile and run the tests. It will first show you the Error test, then valid tetri pieces and in the end do timed tests.
+It should then compile and run the tests. It will first show you the error test and then valid test. If any of them fail it will not test the speed of the program. If everything is good it will continue to test the speed of the program.
 
 
 TESTFILES
