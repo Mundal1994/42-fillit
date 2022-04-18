@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	mallocing and making of the square where everything is initialized to 0	*/
+
 static int	**ft_make_square(int **square, int *len)
 {
 	int	i;
@@ -39,6 +41,8 @@ static int	**ft_make_square(int **square, int *len)
 	return (square);
 }
 
+/*	calculating the initial minimum size of the square	*/
+
 static void	ft_size_calc(int *len, int total)
 {
 	int	min_size;
@@ -53,12 +57,16 @@ static void	ft_size_calc(int *len, int total)
 	}
 }
 
+/*	initializing the making of the square	*/
+
 static int	**ft_square_init(int **square, int *len, int total)
 {
 	ft_size_calc(len, total);
 	square = ft_make_square(square, len);
 	return (square);
 }
+
+/*	resizing and making the square bigger	*/
 
 static int	**ft_resize(t_location *head, t_location *stats,
 int *len, int **square)
@@ -74,6 +82,10 @@ int *len, int **square)
 	stats->s_y = 0;
 	return (square);
 }
+
+/*
+**	creates square and starts the recursive loop of trying to fit the pieces
+*/
 
 int	ft_find_square(int **square, t_location *stats)
 {
