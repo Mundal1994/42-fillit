@@ -57,7 +57,7 @@ static void	ft_offset_calc(t_location *new, char **board, int i)
 	new->height = (((last / 5) - (begin / 5)) + 1);
 }
 
-/*	storing pieces position in struct	*/
+/*	storing pieces position and difference from previous piece in struct	*/
 
 static int	ft_dif_calc(t_location *new, int j, int count)
 {
@@ -85,7 +85,10 @@ static int	ft_dif_calc(t_location *new, int j, int count)
 	return (1);
 }
 
-/*	checking if pieces are valid	*/
+/*
+**	storing pieces position in struct and uses the ft_dif_calc to
+**	calculate the difference of the pieces position from previous piece
+*/
 
 static void	ft_pieces(t_location *new, char **board, int i)
 {
@@ -112,7 +115,10 @@ static void	ft_pieces(t_location *new, char **board, int i)
 	}
 }
 
-/*	collecting the tertri pieces with while loop	*/
+/*
+**	collecting the nescessary information needed from
+**	the tetri pieces in a struct
+*/
 
 t_location	*ft_tetri_collect(t_location *stats, char **board,
 	int total_tetri, int i)
