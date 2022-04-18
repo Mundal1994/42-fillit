@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	prints error message and frees everything before returning -1	*/
+
 int	ft_print_error(char **board, int i, t_location *stats)
 {
 	if (board)
@@ -22,6 +24,8 @@ int	ft_print_error(char **board, int i, t_location *stats)
 	return (-1);
 }
 
+/*	frees line before returning -1	*/
+
 int	ft_free_line(char *line)
 {
 	if (line)
@@ -30,6 +34,8 @@ int	ft_free_line(char *line)
 	return (-1);
 }
 
+/*	deletes the content of stats struct	*/
+
 void	ft_statsdel_content(t_location *stats)
 {
 	free(stats->piece);
@@ -37,6 +43,8 @@ void	ft_statsdel_content(t_location *stats)
 	free(stats->dif);
 	stats->dif = NULL;
 }
+
+/*	deletes stats and/or new struct before returning NULL	*/
 
 t_location	*ft_statsdel_stats(t_location **stats, void (*del)(t_location *),
 t_location *new)
