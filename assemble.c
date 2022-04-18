@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	removes piece from square to try and fit the piece somewhere else	*/
+
 static void	ft_clear_square(int **square, t_location *stats)
 {
 	int	y;
@@ -30,6 +32,8 @@ static void	ft_clear_square(int **square, t_location *stats)
 	y = y + stats->dif->four_y;
 	square[y][x] = 0;
 }
+
+/*	prints the square to the terminal	*/
 
 static void	ft_print(int **square, int *len)
 {
@@ -53,6 +57,8 @@ static void	ft_print(int **square, int *len)
 	}
 }
 
+/*	places the pieces in the square	*/
+
 static void	ft_place(int **square, t_location *stats)
 {
 	int		y;
@@ -71,6 +77,8 @@ static void	ft_place(int **square, t_location *stats)
 	y = y + stats->dif->four_y;
 	square[y][x] = stats->tet_placing + 1;
 }
+
+/*	checks if all the pieces fit in the square	*/
 
 static int	ft_does_it_fit(int **square, t_location *stats, int *len)
 {
@@ -99,6 +107,14 @@ static int	ft_does_it_fit(int **square, t_location *stats, int *len)
 		ft_place(square, stats);
 	return (fit);
 }
+
+/*
+**	loops through the columns to check if the beginning
+**	part of the piece fit if it does it calls the function
+**	ft_does_it_fit to checks if the whole piece fits
+**	if it does it will be put there and next piece will
+**	be put. If out of pieces the square will be printed
+*/
 
 void	ft_square_loop_x(int **square, t_location *stats,
 int *len, t_location *head)
