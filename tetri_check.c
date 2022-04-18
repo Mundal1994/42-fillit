@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	if valid pieces we will add the tetri piece to the board	*/
+
 static int	ft_create_tetri(char **board, char *line, int i)
 {
 	char	*temp;
@@ -35,6 +37,8 @@ static int	ft_create_tetri(char **board, char *line, int i)
 	return (1);
 }
 
+/*	checks if line contains only valid characters	*/
+
 static int	ft_not_val_char(char *line)
 {
 	int	i;
@@ -49,6 +53,12 @@ static int	ft_not_val_char(char *line)
 	return (0);
 }
 
+/*
+**	checks with the help of two smaller functions if the line
+**	contains valid characters and if the length of the line
+**	is 4 or not
+*/
+
 static int	ft_check_char_and_create(char *line, char **board, int i)
 {
 	if (ft_not_val_char(line) == -1 || ft_strlen(line) != 4)
@@ -57,6 +67,8 @@ static int	ft_check_char_and_create(char *line, char **board, int i)
 		return (-1);
 	return (0);
 }
+
+/*	keeps track of and returns the amount of blocks in the read line	*/
 
 static int	ft_block_count(char *line)
 {
@@ -73,6 +85,8 @@ static int	ft_block_count(char *line)
 	}
 	return (j);
 }
+
+/*	loops through to check if piece is valid or not	*/
 
 int	ft_tetri_check(char *line, int fd, char **board, int i)
 {
