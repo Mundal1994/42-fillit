@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	add new to alst	*/
+
 static void	ft_lstad_location(t_location	**alst, t_location	*new)
 {
 	t_location	*temp;
@@ -24,6 +26,8 @@ static void	ft_lstad_location(t_location	**alst, t_location	*new)
 		(*alst)->next = temp;
 	}
 }
+
+/*	calculating the offset and height of the pieces	*/
 
 static void	ft_offset_calc(t_location *new, char **board, int i)
 {
@@ -53,6 +57,8 @@ static void	ft_offset_calc(t_location *new, char **board, int i)
 	new->height = (((last / 5) - (begin / 5)) + 1);
 }
 
+/*	storing pieces position in struct	*/
+
 static int	ft_dif_calc(t_location *new, int j, int count)
 {
 	if (count == 1)
@@ -79,6 +85,8 @@ static int	ft_dif_calc(t_location *new, int j, int count)
 	return (1);
 }
 
+/*	checking if pieces are valid	*/
+
 static void	ft_pieces(t_location *new, char **board, int i)
 {
 	int	j;
@@ -103,6 +111,8 @@ static void	ft_pieces(t_location *new, char **board, int i)
 		j++;
 	}
 }
+
+/*	collecting the tertri pieces with while loop	*/
 
 t_location	*ft_tetri_collect(t_location *stats, char **board,
 	int total_tetri, int i)
