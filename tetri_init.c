@@ -12,6 +12,8 @@
 
 #include "fillit.h"
 
+/*	checks if the # is connected or else it is an invalid piece	*/
+
 static int	ft_block_touch(char *board)
 {
 	int	i;
@@ -37,6 +39,8 @@ static int	ft_block_touch(char *board)
 		return (-1);
 	return (1);
 }
+
+/*	loops through to collect tetri in a string	*/
 
 int	ft_tetri_init(char **argv, char **board, int *i)
 {
