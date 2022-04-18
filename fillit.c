@@ -12,6 +12,12 @@
 
 #include "fillit.h"
 
+/*
+**	the main takes care of calling the functions in the correct order to
+**	arrange tetriminos among themselves and determine the smallest square that
+**	can fit all of them
+*/
+
 int	main(int argc, char **argv)
 {
 	int			tetri_count;
