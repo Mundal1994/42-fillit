@@ -26,4 +26,4 @@ I got inspiration from another gnl test from the student agadhgad. I'm not used 
 
 ## COLLAPORATORS
 
-The following code and project was made in collaboration with jddavis23 (https://github.com/jddavis23).
+The following code and project was made in collaboration with Jeff Davis (https://github.com/jddavis23).
