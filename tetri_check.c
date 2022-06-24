@@ -103,9 +103,7 @@ int	ft_tetri_check(char *line, int fd, char **board, int i)
 		if (ft_strcmp(line, "\0") == 0)
 			break ;
 		if (ft_check_char_and_create(line, board, i) == -1)
-		{
 			return (ft_free_line(line));
-		}
 		++gnl_count;
 		ft_free_line(line);
 		ret = get_next_line(fd, &line);
