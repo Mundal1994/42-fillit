@@ -2,7 +2,7 @@
 
 ## ABOUT
 
-Project description: Arrange Tetriminos among themselves and determine the smallest square that can fit all of them.
+Program that arranges Tetriminos among themselves and determine the smallest square that can fit all of them.
 
 ## HOW TO RUN TESTS
 1. Open 'test.sh' and set the MYPATH equal to the path of the fillit you wish to test. Ex.
